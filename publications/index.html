@@ -5,8 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Peer-reviewed conference publications by Vikas Singh.">
   <title>Publications — Vikas Singh</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-</head>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20261115b">
+<style>
+/* Publications page: self-contained critical layout, to guard against stale browser styles */
+.publications-page{max-width:850px}
+.publications-page h1{font-size:25px;line-height:1.2;margin:0 0:18px;color:#494e52}
+.publications-page .publications-intro{font-size:16px;line-height:1.5;margin:0 0:26px;text-align:left}
+.publications-page .publication-year{color:#9ca3a7;font-size:20px;font-weight:700;padding:0 0 9px;border-bottom:1px solid #ebebeb;margin:0 0 6px}
+.publications-page .publication-list{display:block}
+.publications-page .publication-entry{display:grid!important;grid-template-columns:166px minmax(0,1fr)!important;gap:18px!important;align-items:start!important;margin:0 0 25px!important;padding:0 0 12px!important;border:0!important}
+.publications-page .publication-thumbnail{display:block!important;width:166px!important;height:122px!important;padding:0!important;border:1px solid #ddd!important;background:white!important;overflow:hidden}
+.publications-page .publication-thumbnail svg{display:block;width:100%;height:100%}
+.publications-page .publication-entry__body{min-width:0}
+.publications-page .publication-entry__body h3{font-size:16px!important;font-weight:700;line-height:1.32;margin:0 0 5px!important;padding:0!important;border:0!important}
+.publications-page .publication-entry__body h3 a{color:#494e52!important;text-decoration:none}
+.publications-page .publication-entry__body h3 a:hover{color:#b83a4b!important}
+.publications-page .publication-authors,.publications-page .publication-venue,.publications-page .publication-brief{font-size:14px!important;line-height:1.4!important;margin:0 0 4px!important;text-align:left!important}
+.publications-page .publication-brief{margin:6px 0!important}
+.publications-page .publication-tag{display:inline-block!important;padding:2px 6px!important;background:#c7c7c7!important;border-radius:3px!important;color:white!important;font-size:10px!important;font-weight:700!important;line-height:1.4!important}
+.publications-page .publication-tag--selected{background:#4298b5!important}
+.publications-page .publication-filters{display:flex!important;gap:5px;flex-wrap:wrap;align-items:center;margin:0 0 28px!important}
+.publications-page .publication-filters .filter-label{font-weight:700;margin-right:4px}
+.publications-page .publication-tags{display:flex!important;gap:5px;margin:6px 0!important;flex-wrap:wrap}
+.publications-page .publication-actions{display:flex!important;gap:15px!important;align-items:center;margin:7px 0!important;font-size:14px}
+.publications-page .publication-actions a{color:#b83a4b;text-decoration:none}
+@media(max-width:600px){.publications-page .publication-entry{grid-template-columns:92px minmax(0,1fr)!important;gap:12px!important}.publications-page .publication-thumbnail{width:92px!important;height:80px!important}.publications-page .publication-entry__body h3{font-size:14px!important}.publications-page .publication-authors,.publications-page .publication-venue,.publications-page .publication-brief{font-size:12px!important}}
+</style></head>
 <body>
 <header class="masthead">
   <div class="masthead__inner">
@@ -21,34 +45,24 @@
 </header>
 <div class="page">
   <aside class="sidebar">
-    <img class="avatar" src="https://avatars.githubusercontent.com/u/156132189?v=4" alt="Vikas Singh's GitHub avatar">
-    <h3>Vikas Singh</h3>
-    <p class="role">MSc Data Science student<br>TU Dortmund University</p>
-    <p class="links-title">Links</p>
-    <ul>
-      <li><span class="small-icon">⌖</span>Dortmund, Germany</li>
-      <li><span class="small-icon">⌘</span><a href="https://github.com/vikas56655">GitHub</a></li>
-    </ul>
-  </aside>
+  <img class="avatar" src="https://avatars.githubusercontent.com/u/156132189?v=4" alt="Vikas Singh">
+  <h3>Vikas Singh</h3>
+  <p class="role">MSc Data Science student<br>TU Dortmund University</p>
+  <ul class="author-links">
+    <li><span class="side-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.3 7-13a7 7 0 1 0-14 0c0 6.7 7 13 7 13Z"/><circle cx="12" cy="9" r="2.5" fill="white" stroke="none"/></svg></span><span>Dortmund, Germany</span></li>
+    <li><span class="side-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6" fill="none" stroke="white" stroke-width="1.8"/></svg></span><a href="mailto:vikas.singh56655@gmail.com">Email</a></li>
+    <li><span class="side-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2" fill="#0a66c2"/><path d="M6.5 9.5v8m0-11v.1M10.6 17.5v-8m0 3.3c0-2.5 6-3.8 6 1v3.7" fill="none" stroke="white" stroke-width="2"/></svg></span><a href="https://www.linkedin.com/in/vikas-singh-it/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+    <li><span class="side-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4a9.7 9.7 0 0 0-3 18.9c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1-1.4-1-1.4-.9-.6.1-.6.1-.6 1 0 1.5 1 1.5 1 .9 1.4 2.3 1 2.9.7.1-.7.3-1.1.6-1.4-2.2-.3-4.5-1.1-4.5-4.8 0-1.1.4-2 1-2.7-.1-.2-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.1 9.1 0 0 1 4.9 0c1.8-1.3 2.6-1 2.6-1 .5 1.4.2 2.5.1 2.7.6.7 1 1.6 1 2.7 0 3.7-2.3 4.5-4.5 4.8.4.3.7.9.7 1.8v2.7c0 .3.2.6.7.5A9.7 9.7 0 0 0 12 2.4Z"/></svg></span><a href="https://github.com/vikas56655" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+  </ul>
+</aside>
   <main class="content publications-page">
     <h1>Publications</h1>
     <p class="publications-intro">My peer-reviewed conference publications in applied statistics and machine learning.</p>
-    <div class="publication-filters" aria-label="Publication topics">
-      <span class="filter-label">Topics:</span>
-      <span class="publication-tag publication-tag--selected">ALL PUBLICATIONS</span>
-      <span class="publication-tag">BAYESIAN MODELS</span>
-      <span class="publication-tag">MACHINE LEARNING</span>
-      <span class="publication-tag">HEALTHCARE</span>
-    </div>
+    <div class="publication-filters"><span class="filter-label">Research areas:</span><span class="publication-tag publication-tag--selected">SELECTED PAPERS</span><span class="publication-tag">STATISTICS</span><span class="publication-tag">MACHINE LEARNING</span></div>
     <h2 class="publication-year">2024</h2>
     <div class="publication-list">
       <article class="publication-entry">
-        <div class="publication-thumbnail" role="img" aria-label="Text-based conference paper cover, DASA 2024, hotel booking cancellation">
-          <span class="publication-thumbnail__top">DASA 2024</span>
-          <span class="publication-thumbnail__symbol">P(Cancel)</span>
-          <span class="publication-thumbnail__rule"></span>
-          <span class="publication-thumbnail__caption">Bayesian<br>Models</span>
-        </div>
+        <div class="publication-thumbnail"><svg viewBox="0 0 168 122" role="img" aria-label="Illustrative prediction probability chart"><rect width="168" height="122" fill="#fff"/><text x="9" y="16" font-size="9" fill="#65717a" font-family="Arial">Cancellation probability</text><path d="M25 27V100H157" fill="none" stroke="#9ca3a8" stroke-width="1"/><path d="M25 85 L52 78 L79 64 L106 48 L132 32 L155 24" fill="none" stroke="#4796b0" stroke-width="2.3"/><path d="M25 90 L52 83 L79 67 L106 53 L132 36 L155 28" fill="none" stroke="#b04c5c" stroke-width="1.7" stroke-dasharray="4 3"/><text x="40" y="113" font-size="8" fill="#777" font-family="Arial">Illustrative graphic</text></svg></div>
         <div class="publication-entry__body">
           <h3><a href="https://doi.org/10.1109/DASA63652.2024.10836282" target="_blank" rel="noopener noreferrer">Hotel Booking Cancellation Prediction Using Applied Bayesian Models</a></h3>
           <p class="publication-authors">M. A. Jishan, <strong>V. Singh</strong>, A. K. Ghosh, M. S. Alam, K. R. Mahmud, B. Paul</p>
@@ -59,12 +73,7 @@
         </div>
       </article>
       <article class="publication-entry">
-        <div class="publication-thumbnail publication-thumbnail--health" role="img" aria-label="Text-based conference paper cover, DASA 2024, maternal smoking and birth weight">
-          <span class="publication-thumbnail__top">DASA 2024</span>
-          <span class="publication-thumbnail__symbol">μ ± σ</span>
-          <span class="publication-thumbnail__rule"></span>
-          <span class="publication-thumbnail__caption">Statistical<br>Analysis</span>
-        </div>
+        <div class="publication-thumbnail publication-thumbnail--health"><svg viewBox="0 0 168 122" role="img" aria-label="Illustrative group comparison chart"><rect width="168" height="122" fill="#fff"/><text x="9" y="16" font-size="9" fill="#65717a" font-family="Arial">Birth weight comparison</text><path d="M24 25V100H156" fill="none" stroke="#9ca3a8"/><rect x="45" y="40" width="29" height="60" fill="#86b2be"/><rect x="96" y="56" width="29" height="44" fill="#bf8b9b"/><path d="M59 32V48M53 32H65M53 48H65M110 48V64M104 48H116M104 64H116" stroke="#46545b" stroke-width="1.2"/><text x="37" y="113" font-size="8" fill="#777" font-family="Arial">Illustrative graphic</text></svg></div>
         <div class="publication-entry__body">
           <h3><a href="https://doi.org/10.1109/DASA63652.2024.10836537" target="_blank" rel="noopener noreferrer">Statistical and Machine Learning Analysis of Maternal Smoking's Impact on Neonatal Birth Weight</a></h3>
           <p class="publication-authors">M. S. Alam, M. A. Jishan, A. K. Ghosh, <strong>V. Singh</strong></p>
