@@ -78,3 +78,12 @@ a:hover{text-decoration:underline;color:#8a2b38}
 .publication-actions a{text-decoration:none;color:#b83a4b}
 .publication-actions a:hover{text-decoration:underline}
 @media(max-width:600px){.publication-entry{grid-template-columns:92px minmax(0,1fr);gap:12px;padding:12px 0}.publication-thumbnail{width:92px;min-height:105px;padding:8px 5px;gap:6px}.publication-thumbnail__top{font-size:.53rem}.publication-thumbnail__symbol{font-size:1rem}.publication-thumbnail__caption{font-size:.62rem}.publication-entry__body h3{font-size:.94rem}.publications-page .publication-authors,.publications-page .publication-venue,.publications-page .publication-brief{font-size:.79rem}.publication-filters{gap:4px}.filter-label{width:100%}}
+
+/* Consistent AcademicPages author links across all pages */
+.sidebar .author-links{list-style:none;margin:14px 0 0;padding:0}
+.sidebar .author-links li{display:flex;align-items:center;gap:7px;font-family:inherit;font-size:12px;line-height:1.65;margin:0 0 7px;white-space:normal}
+.sidebar .author-links li a{color:#494e52;text-decoration:none}
+.sidebar .author-links li a:hover{color:#b83a4b;text-decoration:underline}
+.side-icon{flex:0 0 15px;display:inline-flex;width:15px;height:15px;align-items:center;justify-content:center}
+.side-icon svg{width:14px;height:14px;fill:#494e52;display:block}
+@media(max-width:767px){.sidebar .author-links{grid-column:2;margin:4px 0 0}.sidebar .author-links li{display:inline-flex;margin-right:12px}}
