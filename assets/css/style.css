@@ -1,4 +1,48 @@
-/* Personal academic website — layout inspired by AcademicPages / Minimal Mistakes.
-   Typography follows the system font stack used by the reference site. */
-:root{--text:#494e52;--heading:#2b2b2b;--link:#52adc8;--muted:#7a8288;--border:#f2f3f3}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}h1,h2,h3{font-family:inherit;font-weight:700;line-height:1.25;color:var(--heading)}h1{font-size:1.62em;margin:0 0 1em}h2{font-size:1.25em;margin:1.8em 0 .6em;padding-bottom:.4em;border-bottom:1px solid var(--border)}p{margin:0 0 1.3em}.masthead{border-bottom:1px solid #f2f3f3}.masthead__inner{max-width:1280px;margin:auto;padding:0 24px;display:flex;align-items:center;min-height:74px;gap:38px}.masthead__brand{font-weight:700;color:#494e52;white-space:nowrap;font-size:1.05rem}.masthead__nav{display:flex;align-items:center;gap:29px;flex-wrap:wrap}.masthead__nav a{color:#494e52;font-weight:700;font-size:.91rem}.masthead__nav a:hover{color:#000}.page{max-width:1280px;margin:38px auto 0;padding:0 24px;display:grid;grid-template-columns:250px minmax(0,780px);gap:55px}.sidebar{font-size:.93rem;line-height:1.55}.avatar{width:165px;height:165px;object-fit:cover;border-radius:50%;display:block;margin:0 0 18px}.sidebar h3{font-size:1.08rem;margin:0 0 4px;color:#494e52}.sidebar .role{font-size:.91rem;margin:0 0 13px}.sidebar .links-title{font-size:.85rem;font-weight:700;color:#494e52;margin:16px 0 6px}.sidebar ul{list-style:none;margin:0;padding:0}.sidebar li{margin:8px 0;font-size:.86rem}.sidebar li a{color:#494e52}.sidebar li a:hover{color:var(--link)}.small-icon{display:inline-block;width:20px;color:#7a8288;font-style:normal}.content{min-width:0;padding:5px 0 70px}.content p{font-size:1rem}.project{margin:20px 0 25px}.project a{font-weight:600}.project__meta{font-size:.85rem;color:var(--muted);margin:4px 0 0}.footer{max-width:1280px;margin:32px auto 0;padding:22px 24px 28px;border-top:1px solid var(--border);color:var(--muted);font-size:.78rem}.footer a{color:var(--muted)}.muted{color:var(--muted)}.pill{display:inline-block;background:#f3f5f5;color:#666;border-radius:3px;padding:1px 7px;font-size:.78rem;margin-left:5px}.active{border-bottom:2px solid var(--link);padding-bottom:2px}@media(max-width:780px){.masthead__inner{min-height:65px;gap:16px;align-items:flex-start;flex-direction:column;padding:14px 20px}.masthead__nav{gap:18px}.page{display:block;margin:26px auto;padding:0 20px}.sidebar{margin-bottom:36px;display:grid;grid-template-columns:105px 1fr;column-gap:20px;align-items:start}.avatar{width:105px;height:105px;grid-row:1/5;margin-bottom:0}.sidebar h3{margin-top:3px}.sidebar .links-title,.sidebar ul{grid-column:2}.content{padding:0 0 42px}.footer{margin-top:0}}
+/* Faithful visual adaptation of Yann Dubois's AcademicPages / Minimal Mistakes
+   settings (public source: github.com/YannDubs/YannDubs.github.io).
+   Original theme has $doc-font-size:16, system San Francisco font stack,
+   #b83a4b links, #7a8288 nav links, 1.5 body line height and 175px avatar. */
+:root{--text:#494e52;--border:#f2f3f3;--link:#b83a4b;--nav:#7a8288;--muted:#7a8288;}
+*{box-sizing:border-box}
+html{font-size:16px;scroll-behavior:smooth}
+body{margin:0;padding:0;min-height:100vh;background:#fff;color:var(--text);
+font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;}
+h1,h2,h3,h4{font-family:inherit;font-weight:700;line-height:1.2;color:var(--text)}
+h1{font-size:1.563em;margin:0 0 .5em}
+h2{font-size:1.25em;margin:2em 0 .5em;padding-bottom:.5em;border-bottom:1px solid var(--border)}
+h3{font-size:1em}
+p{margin:0 0 1.3em;text-align:justify}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline;color:#8a2b38}
+.masthead{position:relative;border-bottom:1px solid var(--border)}
+.masthead__inner{max-width:1280px;margin:auto;padding:1em;display:flex;align-items:center;min-height:64px;gap:0}
+.masthead__brand{color:var(--nav);font-weight:700;font-size:1rem;margin-right:2em;white-space:nowrap}
+.masthead__brand:hover{color:var(--link);text-decoration:none}
+.masthead__nav{display:flex;align-items:center;gap:0;flex-wrap:wrap}
+.masthead__nav a{position:relative;display:block;color:var(--nav);font-size:1rem;font-weight:400;margin:0 1rem;padding:.5rem 0;white-space:nowrap}
+.masthead__nav a:hover{color:var(--link);text-decoration:none}
+.masthead__nav a::after{content:"";position:absolute;left:0;bottom:0;height:4px;width:100%;background:#e7aeb6;transform:scaleX(0);transition:transform .2s ease}
+.masthead__nav a:hover::after{transform:scaleX(1)}
+.page{max-width:1280px;margin:2em auto 0;padding:0 1em;display:grid;grid-template-columns:calc((100% - 4em)/6) minmax(0,850px);column-gap:3.5em;align-items:start}
+.sidebar{font-size:1rem;line-height:1.5}
+.avatar{display:block;width:175px;max-width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:50%;border:1px solid var(--border);padding:5px;margin:0 0 10px}
+.sidebar h3{font-size:1rem;line-height:1.2;font-weight:700;margin:10px 0}
+.sidebar .role{font-size:.75rem;line-height:1.5;margin:10px 0 20px;text-align:left}
+.sidebar .links-title{font-size:.75rem;font-weight:700;margin:0 0 7px}
+.sidebar ul{list-style:none;padding:0;margin:0}
+.sidebar li{font-size:.75rem;line-height:1.5;margin:0 0 5px;white-space:nowrap}
+.sidebar li a{color:var(--text)}
+.sidebar li a:hover{color:var(--link)}
+.small-icon{display:inline-block;width:20px;color:#7a8288;font-style:normal}
+.content{padding:0 0 80px;min-width:0}
+.content p{font-size:1rem;line-height:1.5}
+.content .hello{font-weight:400;margin:0 0 1.3em;text-align:left}
+.project{margin:1.4em 0}
+.project a{font-weight:600}
+.project__meta{color:#7a8288;font-size:.75rem;margin:.3em 0 0;text-align:left}
+.footer{max-width:1280px;margin:3em auto 0;padding:1.6em 1em 2em;color:var(--muted);font-size:.75rem;border-top:1px solid var(--border)}
+.footer a{color:var(--muted)}
+.muted{color:var(--muted)}
+@media(max-width:924px){.page{grid-template-columns:170px minmax(0,1fr);gap:2em}.masthead__inner{flex-wrap:wrap}}
+@media(max-width:767px){.masthead__inner{padding:.75em 1em;gap:.5em}.masthead__brand{margin-right:1em}.masthead__nav a{font-size:.86rem;margin:0 .5em}.page{display:block;margin:1.5em auto 0}.sidebar{display:grid;grid-template-columns:75px 1fr;column-gap:1em;margin-bottom:2em}.avatar{width:75px;grid-row:1/5;padding:2px;margin:0}.sidebar h3{margin:0 0 4px}.sidebar .role{margin:0 0 6px}.sidebar .links-title,.sidebar ul{grid-column:2}.sidebar li{display:inline-block;margin-right:12px}.content{padding-bottom:2em}.footer{margin:1em auto 0}}
