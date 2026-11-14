@@ -15,7 +15,7 @@ h3{font-size:1em}
 p{margin:0 0 1.3em;text-align:justify}
 a{color:var(--link);text-decoration:none}
 a:hover{text-decoration:underline;color:#8a2b38}
-.masthead{position:relative;border-bottom:1px solid var(--border)}
+.masthead{position:relative;background:#ededed;border-bottom:1px solid #d7d7d7}
 .masthead__inner{max-width:1280px;margin:auto;padding:1em;display:flex;align-items:center;min-height:64px;gap:0}
 .masthead__brand{color:var(--nav);font-weight:700;font-size:1rem;margin-right:2em;white-space:nowrap}
 .masthead__brand:hover{color:var(--link);text-decoration:none}
@@ -46,3 +46,7 @@ a:hover{text-decoration:underline;color:#8a2b38}
 .muted{color:var(--muted)}
 @media(max-width:924px){.page{grid-template-columns:170px minmax(0,1fr);gap:2em}.masthead__inner{flex-wrap:wrap}}
 @media(max-width:767px){.masthead__inner{padding:.75em 1em;gap:.5em}.masthead__brand{margin-right:1em}.masthead__nav a{font-size:.86rem;margin:0 .5em}.page{display:block;margin:1.5em auto 0}.sidebar{display:grid;grid-template-columns:75px 1fr;column-gap:1em;margin-bottom:2em}.avatar{width:75px;grid-row:1/5;padding:2px;margin:0}.sidebar h3{margin:0 0 4px}.sidebar .role{margin:0 0 6px}.sidebar .links-title,.sidebar ul{grid-column:2}.sidebar li{display:inline-block;margin-right:12px}.content{padding-bottom:2em}.footer{margin:1em auto 0}}
+
+/* Neutral grey header, matching the requested masthead treatment. */
+.masthead__brand{color:#494e52}
+.masthead__nav a{color:#494e52}
