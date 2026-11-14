@@ -50,3 +50,31 @@ a:hover{text-decoration:underline;color:#8a2b38}
 /* Neutral grey header, matching the requested masthead treatment. */
 .masthead__brand{color:#494e52}
 .masthead__nav a{color:#494e52}
+
+
+/* Compact AcademicPages-inspired bibliography layout, tailored to two DASA papers */
+.publications-page h1{font-size:1.563rem;margin:0 0:.65em}
+.publications-intro{margin:0 0:1.45em;text-align:left}
+.publication-filters{display:flex;align-items:center;flex-wrap:wrap;gap:5px;margin:0 0:1.55em}
+.filter-label{font-size:1rem;font-weight:700;margin-right:3px}
+.publication-tag{display:inline-block;background:#c7c7c7;color:#fff;font-size:.61rem;line-height:1.4;font-weight:700;border-radius:3px;padding:2px 6px;letter-spacing:.01em;white-space:nowrap}
+.publication-tag--selected{background:#4298b5}
+.publication-year{font-size:1.16rem;color:#9ca3a7;border-bottom:1px solid #ececec;padding:0 0:.45em;margin:0 0:.1em}
+.publication-entry{display:grid;grid-template-columns:166px minmax(0,1fr);gap:18px;align-items:start;padding:14px 0 18px;border-bottom:1px solid #f2f3f3;margin:0 0:12px}
+.publication-thumbnail{width:166px;min-height:142px;padding:14px 10px 10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:#eef2f3;color:#4c6973;border:1px solid #d7dfe1;text-align:center;overflow:hidden}
+.publication-thumbnail--health{background:#f0f0f4;color:#6c627e;border-color:#dedbe5}
+.publication-thumbnail__top{font-size:.68rem;font-weight:700;letter-spacing:.12em}
+.publication-thumbnail__symbol{font-size:1.36rem;font-weight:700;letter-spacing:-.04em}
+.publication-thumbnail__rule{height:2px;width:55%;background:currentColor;opacity:.25}
+.publication-thumbnail__caption{font-weight:700;font-size:.87rem;line-height:1.25}
+.publication-entry__body h3{font-size:1rem;line-height:1.32;margin:0 0:5px;font-weight:700;color:#494e52}
+.publication-entry__body h3 a{color:#494e52}
+.publication-entry__body h3 a:hover{color:var(--link)}
+.publications-page .publication-authors,.publications-page .publication-venue,.publications-page .publication-brief{font-size:.87rem;line-height:1.43;margin:0 0:5px;text-align:left}
+.publication-authors strong{font-weight:700}
+.publications-page .publication-brief{margin:6px 0 7px}
+.publication-tags{display:flex;gap:4px;flex-wrap:wrap;margin:8px 0}
+.publication-actions{display:flex;gap:16px;margin:8px 0 0;font-size:.84rem;font-weight:600}
+.publication-actions a{text-decoration:none;color:#b83a4b}
+.publication-actions a:hover{text-decoration:underline}
+@media(max-width:600px){.publication-entry{grid-template-columns:92px minmax(0,1fr);gap:12px;padding:12px 0}.publication-thumbnail{width:92px;min-height:105px;padding:8px 5px;gap:6px}.publication-thumbnail__top{font-size:.53rem}.publication-thumbnail__symbol{font-size:1rem}.publication-thumbnail__caption{font-size:.62rem}.publication-entry__body h3{font-size:.94rem}.publications-page .publication-authors,.publications-page .publication-venue,.publications-page .publication-brief{font-size:.79rem}.publication-filters{gap:4px}.filter-label{width:100%}}
