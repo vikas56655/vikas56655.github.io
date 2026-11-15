@@ -140,3 +140,15 @@ body, .content, .content p, h1, h2, h3, h4, h5, h6,
 .publications-page .publication-entry__body h3 a { color: #111111 !important; }
 .projects-page a, .content .project a { color: #64686c; }
 .projects-page a:hover, .content .project a:hover { color: #42464a; }
+
+/* Sky-blue links with near-black body text — 2026-11-15 */
+:root { --link: #4298b5; }
+a { color: #4298b5; }
+a:hover { color: #287991; }
+.projects-page a, .content .project a { color: #4298b5; }
+.projects-page a:hover, .content .project a:hover { color: #287991; }
+.publications-page .publication-actions a { color: #4298b5; }
+.publications-page .publication-entry__body h3 a:hover { color: #4298b5 !important; }
+.masthead__brand:hover, .masthead__nav a:hover,
+.sidebar .author-links li a:hover, .sidebar li a:hover { color: #4298b5; }
+.masthead__nav a::after { background: #9ac9d9; }
