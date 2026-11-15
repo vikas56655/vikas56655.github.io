@@ -160,3 +160,8 @@ a:hover { color: #287991; }
 .hello-sticker{display:block;margin:0 0 1.4rem;text-align:left;line-height:0}
 .hello-sticker img{display:block;width:min(440px,100%);max-width:100%;height:auto;object-fit:contain}
 @media(max-width:767px){.hello-sticker{margin-bottom:1rem}.hello-sticker img{width:min(360px,100%)}}
+
+/* Minimal homepage greeting in Apple's native system typography */
+.home-greeting{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;font-weight:700;font-size:2.2rem;line-height:1.18;letter-spacing:-.025em;color:#111111;margin:0 0:1.1em;text-align:left}
+.home-greeting .wave-emoji{display:inline-block;font-size:.9em;letter-spacing:normal;vertical-align:baseline}
+@media(max-width:767px){.home-greeting{font-size:1.85rem}}
