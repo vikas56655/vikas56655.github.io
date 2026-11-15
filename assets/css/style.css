@@ -152,3 +152,6 @@ a:hover { color: #287991; }
 .masthead__brand:hover, .masthead__nav a:hover,
 .sidebar .author-links li a:hover, .sidebar li a:hover { color: #4298b5; }
 .masthead__nav a::after { background: #9ac9d9; }
+
+/* Larger site title in the grey navigation bar */
+.masthead__brand{font-size:1.35rem;font-weight:700;line-height:1.2}
