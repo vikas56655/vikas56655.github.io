@@ -155,3 +155,8 @@ a:hover { color: #287991; }
 
 /* Larger site title in the grey navigation bar */
 .masthead__brand{font-size:1.35rem;font-weight:700;line-height:1.2}
+
+/* Homepage Hello World sticker replaces the former Hello! text heading */
+.hello-sticker{display:block;margin:0 0 1.4rem;text-align:left;line-height:0}
+.hello-sticker img{display:block;width:min(440px,100%);max-width:100%;height:auto;object-fit:contain}
+@media(max-width:767px){.hello-sticker{margin-bottom:1rem}.hello-sticker img{width:min(360px,100%)}}
