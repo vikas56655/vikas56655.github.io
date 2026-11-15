@@ -115,3 +115,14 @@ body{font-size:1rem;line-height:1.5}
 .publications-page h1{font-size:1.563rem}
 .publications-page .publications-intro{font-size:1rem}
 @media(max-width:600px){.publications-page .publication-entry__body h3{font-size:.94rem!important}.publications-page .publication-authors,.publications-page .publication-venue,.publications-page .publication-brief{font-size:.79rem!important}}
+
+/* Apple-like typography: use the native San Francisco family on Apple devices.
+   Other operating systems use their system UI font without redistributing Apple fonts. */
+html, body, button, input, textarea, select {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6, .masthead__brand, .masthead__nav {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+    "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
