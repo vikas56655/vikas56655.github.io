@@ -165,3 +165,30 @@ a:hover { color: #287991; }
 .home-greeting{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;font-weight:700;font-size:2.2rem;line-height:1.18;letter-spacing:-.025em;color:#111111;margin:0 0:1.1em;text-align:left}
 .home-greeting .wave-emoji{display:inline-block;font-size:.9em;letter-spacing:normal;vertical-align:baseline}
 @media(max-width:767px){.home-greeting{font-size:1.85rem}}
+
+/* Responsive project gallery — scoped to the Projects page; preserves the site design. */
+.projects-page__heading{margin:0 0:1.55rem}
+.projects-page__eyebrow{font-size:.68rem!important;letter-spacing:.18em;text-transform:uppercase;color:#7b8691!important;font-weight:700;margin:0 0:.55rem!important;text-align:left}
+.projects-page__heading h1{font-size:clamp(2rem,3.6vw,3rem);letter-spacing:-.055em;line-height:1.1;margin:0 0:.6rem;color:#111}
+.projects-page__dot{color:#4298b5}
+.projects-page__heading>p:last-child{font-size:.93rem;max-width:34rem;color:#616a73;text-align:left;line-height:1.55;margin:0}
+.portfolio-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.15rem;align-items:stretch}
+.portfolio-card{display:flex;flex-direction:column;min-width:0;border-radius:15px;overflow:hidden;border:1px solid #e8eaed;background:#fff;box-shadow:0 4px 18px rgba(22,36,53,.055);transition:transform .22s ease,box-shadow .22s ease}
+.portfolio-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(22,36,53,.12)}
+.portfolio-card__media{position:relative;aspect-ratio:16/9;overflow:hidden;background:#172338}
+.portfolio-card__media img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.portfolio-card:hover .portfolio-card__media img{transform:scale(1.035)}
+.portfolio-card__media-shade{position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(4,12,25,.82) 100%);pointer-events:none}
+.portfolio-card__media h2{position:absolute;bottom:0;left:0;right:0;border:0;padding:1rem 1.05rem;margin:0;font-size:clamp(1rem,1.7vw,1.22rem);letter-spacing:-.025em;line-height:1.22;color:#fff;text-shadow:0 1px 7px rgba(0,0,0,.35)}
+.portfolio-card__body{padding:1rem 1.05rem 1.05rem;display:flex;flex-direction:column;flex:1}
+.portfolio-card__tags{display:flex;flex-wrap:wrap;gap:.36rem;margin:0 0:.75rem}
+.portfolio-card__tags span{font-size:.61rem;line-height:1.2;padding:.32rem .52rem;background:#f2f5f7;border:1px solid #e7edf0;border-radius:999px;font-weight:650;color:#50616e;white-space:nowrap}
+.projects-page .portfolio-card__body p{font-size:.79rem;line-height:1.55;color:#606872;margin:0 0:1.1rem;text-align:left;flex:1}
+.projects-page .portfolio-card__github{align-self:flex-start;display:inline-flex;align-items:center;gap:.45rem;padding:.45rem .82rem;border-radius:999px;border:1px solid #d9e0e5;background:#fff;color:#273541;font-size:.71rem;font-weight:700;line-height:1.35;transition:background .18s,border-color .18s,color .18s}
+.projects-page .portfolio-card__github svg{width:15px;height:15px}
+.projects-page .portfolio-card__github:hover,.projects-page .portfolio-card__github:focus-visible{background:#123756;border-color:#123756;color:#fff;text-decoration:none}
+.projects-page__more{margin:1.5rem 0 0!important;font-size:.78rem!important;color:#6b7280!important;text-align:left!important}
+.projects-page__more a{font-weight:600}
+@media(max-width:990px){.portfolio-grid{grid-template-columns:1fr 1fr;gap:.8rem}.portfolio-card__body{padding:.85rem}.portfolio-card__media h2{padding:.8rem}}
+@media(max-width:690px){.portfolio-grid{grid-template-columns:1fr;gap:1rem}.portfolio-card__media h2{font-size:1.22rem}.portfolio-card__body{padding:1rem}.projects-page .portfolio-card__body p{font-size:.88rem}}
+@media(prefers-reduced-motion:reduce){.portfolio-card,.portfolio-card__media img{transition:none}.portfolio-card:hover{transform:none}.portfolio-card:hover .portfolio-card__media img{transform:none}}
