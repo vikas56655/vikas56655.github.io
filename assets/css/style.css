@@ -172,7 +172,7 @@ a:hover { color: #287991; }
 .projects-page__heading h1{font-size:clamp(2rem,3.6vw,3rem);letter-spacing:-.055em;line-height:1.1;margin:0 0:.6rem;color:#111}
 .projects-page__dot{color:#4298b5}
 .projects-page__heading>p:last-child{font-size:.93rem;max-width:34rem;color:#616a73;text-align:left;line-height:1.55;margin:0}
-.portfolio-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.15rem;align-items:stretch}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.85rem;align-items:stretch}
 .portfolio-card{display:flex;flex-direction:column;min-width:0;border-radius:15px;overflow:hidden;border:1px solid #e8eaed;background:#fff;box-shadow:0 4px 18px rgba(22,36,53,.055);transition:transform .22s ease,box-shadow .22s ease}
 .portfolio-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(22,36,53,.12)}
 .portfolio-card__media{position:relative;aspect-ratio:16/9;overflow:hidden;background:#172338}
@@ -192,3 +192,13 @@ a:hover { color: #287991; }
 @media(max-width:990px){.portfolio-grid{grid-template-columns:1fr 1fr;gap:.8rem}.portfolio-card__body{padding:.85rem}.portfolio-card__media h2{padding:.8rem}}
 @media(max-width:690px){.portfolio-grid{grid-template-columns:1fr;gap:1rem}.portfolio-card__media h2{font-size:1.22rem}.portfolio-card__body{padding:1rem}.projects-page .portfolio-card__body p{font-size:.88rem}}
 @media(prefers-reduced-motion:reduce){.portfolio-card,.portfolio-card__media img{transition:none}.portfolio-card:hover{transform:none}.portfolio-card:hover .portfolio-card__media img{transform:none}}
+
+/* Three cards per row on desktop; unchanged content and two/one-column mobile fallbacks. */
+@media(min-width:991px){
+  .projects-page .portfolio-card__media h2{font-size:1rem;padding:.75rem .8rem}
+  .projects-page .portfolio-card__body{padding:.8rem}
+  .projects-page .portfolio-card__tags{gap:.25rem;margin-bottom:.65rem}
+  .projects-page .portfolio-card__tags span{font-size:.56rem;padding:.26rem .4rem}
+  .projects-page .portfolio-card__body p{font-size:.73rem;line-height:1.48;margin-bottom:.8rem}
+  .projects-page .portfolio-card__github{font-size:.68rem;padding:.4rem .7rem}
+}
