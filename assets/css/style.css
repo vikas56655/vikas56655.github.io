@@ -202,3 +202,19 @@ a:hover { color: #287991; }
   .projects-page .portfolio-card__body p{font-size:.73rem;line-height:1.48;margin-bottom:.8rem}
   .projects-page .portfolio-card__github{font-size:.68rem;padding:.4rem .7rem}
 }
+
+/* Shared heading treatment for Publications and CV, matching the Projects title. */
+.publications-page .section-page-heading h1,
+.cv-page .section-page-heading h1{
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:clamp(2rem,3.6vw,3rem);
+  font-weight:700;
+  letter-spacing:-.055em;
+  line-height:1.1;
+  margin:0 0 .6rem;
+  padding:0;
+  border:0;
+  color:#111;
+}
+.section-page-dot{color:#4298b5}
+.section-page-heading{margin:0 0 1.1rem}
