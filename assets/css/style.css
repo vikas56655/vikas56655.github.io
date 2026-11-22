@@ -218,3 +218,6 @@ a:hover { color: #287991; }
 }
 .section-page-dot{color:#4298b5}
 .section-page-heading{margin:0 0 1.1rem}
+
+/* Consistent yellow marker highlight for the main portfolio section headings. */
+.yellow-heading-highlight{background:#fff34f;color:#111;padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
